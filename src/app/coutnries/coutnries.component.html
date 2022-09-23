@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let country of countries">
+        <a [routerLink]="['/countryDetails',country.alpha2Code]"> {{country.name}}</a>
+    </li>
+</ul>

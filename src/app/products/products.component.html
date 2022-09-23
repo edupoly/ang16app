@@ -1,0 +1,15 @@
+
+<div class="d-flex flex-wrap">
+    <div class="w-50">
+        <ul>
+            <li *ngFor="let product of products">
+                
+                <a [routerLink]="['productDetails',product.title]" [queryParams]="product">{{product.title}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-50">
+        <h1>Details</h1>
+        <router-outlet></router-outlet>
+    </div>
+</div>
