@@ -7,6 +7,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
 import { CoutnriesComponent } from './coutnries/coutnries.component';
 import { DefaultComponent } from './default/default.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductGuard } from './product.guard';
 import { ProductsComponent } from './products/products.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
     component:CountryDetailsComponent
   },
   {
+    path:'login',
+    component:LoginComponent
+  },
+  {
     path:'products',
     component:ProductsComponent,
     canActivate:[ProductGuard,AuthGuard],
@@ -45,7 +50,7 @@ const routes: Routes = [
   },
   {
     path:"",
-    component:HomeComponent
+    component:LoginComponent
   },
   {
     path:"**",
